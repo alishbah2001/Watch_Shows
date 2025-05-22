@@ -11,6 +11,7 @@ import Config from "../config"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 import { useAppTheme, useThemeProvider } from "@/utils/useAppTheme"
 import { ComponentProps } from "react"
+import { BottomTabNavigator } from "./BottomTabNavigator"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -51,19 +52,20 @@ const AppStack = () => {
   } = useAppTheme()
 
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-        navigationBarColor: colors.background,
-        contentStyle: {
-          backgroundColor: colors.background,
-        },
-      }}
-    >
-      <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} />
-      {/** 🔥 Your screens go here */}
-      {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
-    </Stack.Navigator>
+    // <Stack.Navigator
+    //   screenOptions={{
+    //     headerShown: false,
+    //     navigationBarColor: colors.background,
+    //     contentStyle: {
+    //       backgroundColor: colors.background,
+    //     },
+    //   }}
+    // >
+    //   <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} />
+    //   {/** 🔥 Your screens go here */}
+    //   {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
+    // </Stack.Navigator>
+    <BottomTabNavigator />
   )
 }
 
